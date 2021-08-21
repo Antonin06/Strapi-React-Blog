@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_block_heroes",
+  "info": {
+    "name": "Hero",
+    "icon": "laptop-code",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "texte": {
+      "type": "string"
+    },
+    "buttons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.links"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

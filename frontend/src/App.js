@@ -8,7 +8,7 @@ import Category from "./pages/Category";
 import SiteHeader from "./components/SiteHeader";
 
 // Import SCSS
-import './assets/scss/custom.scss';
+import './assets/scss/styles.scss';
 
 // Setup Apollo Client
 const client = new ApolloClient({

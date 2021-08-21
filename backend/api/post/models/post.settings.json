@@ -24,6 +24,16 @@
       "collection": "category",
       "via": "posts",
       "dominant": true
+    },
+    "thumbnail": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
     }
   }
 }
