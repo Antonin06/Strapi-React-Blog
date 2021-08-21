@@ -24,7 +24,7 @@ function PostDetails() {
 
 	if (loading) return <p>Loading...</p>
 	if (error) return <p>Error :(</p>
-	console.log(data)
+
 
 	return (
 		<div className="review-card">
