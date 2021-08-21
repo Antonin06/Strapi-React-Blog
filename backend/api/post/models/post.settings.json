@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "name": "post",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "postContent": {
+      "type": "richtext",
+      "required": true
+    },
+    "categories": {
+      "collection": "category",
+      "via": "posts",
+      "dominant": true
+    }
+  }
+}
