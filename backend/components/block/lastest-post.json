@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_block_lastest_posts",
+  "info": {
+    "name": "LastestPost",
+    "icon": "apple-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "posts": {
+      "collection": "post"
+    },
+    "title": {
+      "type": "string"
+    },
+    "links_all_posts": {
+      "type": "string"
+    }
+  }
+}

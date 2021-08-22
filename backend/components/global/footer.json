@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_global_footers",
+  "info": {
+    "name": "Footer",
+    "icon": "book-reader",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "links_1": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.links",
+      "required": true
+    },
+    "links_2": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.links",
+      "required": true
+    },
+    "address": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

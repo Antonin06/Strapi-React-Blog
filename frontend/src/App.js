@@ -5,7 +5,9 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import Homepage from "./pages/Homepage";
 import PostDetails from "./pages/PostDetails";
 import Category from "./pages/Category";
+import Blog from "./pages/Blog";
 import SiteHeader from "./components/SiteHeader";
+import Footer from "./components/Footer";
 
 // Import SCSS
 import './assets/scss/styles.scss';
@@ -32,7 +34,11 @@ function App() {
                         <Route path="/categories/:id">
                             <Category/>
                         </Route>
+                        <Route path="/blog">
+                            <Blog/>
+                        </Route>
                     </Switch>
+                    <Footer/>
                 </div>
             </ApolloProvider>
         </Router>

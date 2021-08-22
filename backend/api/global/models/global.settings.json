@@ -2,7 +2,8 @@
   "kind": "singleType",
   "collectionName": "globals",
   "info": {
-    "name": "global"
+    "name": "global",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -24,6 +25,17 @@
         }
       },
       "component": "global.navigation"
+    },
+    "footer": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "global.footer",
+      "required": true
     }
   }
 }

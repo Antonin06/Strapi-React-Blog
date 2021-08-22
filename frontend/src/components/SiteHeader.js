@@ -7,29 +7,29 @@ const QUERY = gql`
 		categories {
 			name,
 			id
-    },
-  	global {
-		id,
+    	},
+  		global {
+			id,
 			navigation {
-			links {
-				id,
-					href,
-					label,
-					target
-			},
-			leftButton {
-				id,
-					href,
-					label,
-					target
-			},
-			rightButton {
-				id,
-					href,
-					label,
-					target
+				links {
+					id,
+						href,
+						label,
+						target
+				},
+				leftButton {
+					id,
+						href,
+						label,
+						target
+				},
+				rightButton {
+					id,
+						href,
+						label,
+						target
+				}
 			}
-		}
 	}}
 `
 
@@ -43,7 +43,7 @@ function SiteHeader() {
 	console.log(data)
 
 	return (
-		<div className="header">
+		<section className="header" id="header">
 			<nav className="navbar navbar-expand-lg navbar-light bg-light">
 				<div className="container">
 					<Link to={`${data.global.navigation.leftButton.href}`} target={`${data.global.navigation.leftButton.target}`} className="navbar-brand" >
@@ -78,7 +78,7 @@ function SiteHeader() {
 			{/*		<Link key={category.id} to={`/categories/${category.id}`}>{category.name}</Link>*/}
 			{/*	))}*/}
 			{/*</nav>*/}
-		</div>
+		</section>
 	);
 }
 
