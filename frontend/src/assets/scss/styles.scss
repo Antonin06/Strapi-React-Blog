@@ -8,6 +8,10 @@
 
 // CUSTOM SCSS
 @import 'custom';
+@import 'blog';
+//PARTIALS
+@import 'partials/block-header';
+
 // Configuration
 @import "bootstrap/functions";
 

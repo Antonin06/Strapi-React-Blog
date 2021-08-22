@@ -15,7 +15,11 @@ const BLOGPAGE = gql`
 			id,
 			thumbnail {
 				url
-			}
+			},
+			categories {
+				id,
+        		name
+      		}
 		}
 	}
 `
@@ -30,12 +34,28 @@ function Blog() {
 	return (
 		<section id="blog-page">
 			<div className="container">
-				<div className="block-header">
-					<span className={`${data.blogPage.color_label}`}>{data.blogPage.label}</span>
+				<div id="block-header">
+					<span className={`label ${data.blogPage.color_label}`}>{data.blogPage.label}</span>
 					<h1>{data.blogPage.title}</h1>
 				</div>
 				<div className="block-articles">
-
+					<div className="row">
+						{data.posts.map(post => (
+							<div key={post.id} className="col-6">
+								<div className="card">
+									<div className="card-body">
+										{post.categories.map(c => (
+											<Link className="category" key={c.id} to={`/categories/${c.id}`}>{c.name}</Link>
+										))}
+										<img src={`http://localhost:1337${post.thumbnail.url}`} className="card-img-top" alt="..."/>
+										<h5 className="card-title">{post.title}</h5>
+										<p className="card-text">{post.postContent}</p>
+										<Link to={`/blog/${post.id}`}>Lire plus</Link>
+									</div>
+								</div>
+							</div>
+						))}
+					</div>
 				</div>
 			</div>
 		</section>
